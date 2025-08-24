@@ -40,6 +40,14 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"  // <-- Add this
+    }
     lintOptions {
         disable 'InvalidPackage'
     }
@@ -49,7 +57,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
+// java {
+//     sourceCompatibility = JavaVersion.VERSION_1_8
+//     targetCompatibility = JavaVersion.VERSION_1_8
+// }
+// kotlinOptions {
+//         jvmTarget = "1.8"  // <-- Add this
+//     }
